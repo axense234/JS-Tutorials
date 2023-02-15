@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IndexedDB Tutorial</title>
+  </head>
+  <body>
+    <!-- Inputs -->
+    DB<input type="text" name="text" id="txtDB" value="notes" /> DB<input
+      type="text"
+      name="text"
+      id="txtVersion"
+      value="1"
+    />
+    <!-- Buttons -->
+    <button id="btnCreateDB">Create DB</button>
+    <button id="btnAddNote">Add Note</button>
+    <button id="btnViewNotes">View Notes</button>
+    <!-- Script -->
+    <script>
+      let db = null;
+
+      const btnCreateDB = document.getElementById("btnCreateDB");
+      const btnAddNote = document.getElementById("btnAddNote");
+      const btnViewNotes = document.getElementById("btnViewNotes");
+
+      btnCreateDB.addEventListener("click", createDB);
+      btnAddNote.addEventListener("click", addNote);
+      btnViewNotes.addEventListener("click", viewNotes);
+
+      // VIEW NOTES
+      function viewNotes() {
+        const tx = db.transaction("personalNotes", "readonly");
+        const personalNotes = tx.objectStore("personalNotes");
+
+        const request = personalNotes.openCursor();
+        request.onsuccess = (e) => {
+          const cursor = e.target.result;
+          if (cursor) {
+            // do something with the cursor
+            alert(`Title: ${cursor.key} Text:${cursor.value.text}`);
+            // continue with the next shit
+            cursor.continue();
+          }
+        };
+      }
+
+      // ADD NOTE
+      function addNote() {
+        const note = {
+          title: "note" + Math.random(),
+          text: "This is my note",
+        };
+
+        const tx = db.transaction("personalNotes", "readwrite");
+
+        tx.onerror = (e) => {
+          alert(`Error ${e.target.error}`);
+        };
+
+        const personalNotes = tx.objectStore("personalNotes");
+        // .delete()
+        //  to update one,you need to delete it and add it back(i know)
+        personalNotes.add(note);
+      }
+      // CREATE DB
+      function createDB() {
+        // Get stuff
+        const dbName = document.getElementById("txtDB").value;
+        const dbVersion = document.getElementById("txtVersion").value;
+        const request = indexedDB.open(dbName, dbVersion);
+
+        // on upgrade needed
+        request.onupgradeneeded = (e) => {
+          db = e.target.result;
+          console.log(db);
+
+          // notes = }
+          //  title:"note1",
+          //  text:"this is a note"
+          // }
+
+          const pNotes = db.createObjectStore("personalNotes", {
+            keyPath: "title",
+          });
+          const todoNotes = db.createObjectStore("todoNotes", {
+            keyPath: "title",
+          });
+
+          alert("upgrade is called");
+        };
+
+        // on success
+        request.onsuccess = (e) => {
+          db = e.target.result;
+          alert(`success is called ${db.name} version ${db.version}`);
+        };
+
+        // on error
+        request.onerror = (e) => {
+          alert(`error ${e.target.error}`);
+        };
+      }
+    </script>
+  </body>
+</html>

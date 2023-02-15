@@ -1,0 +1,113 @@
+JavaScript Tutorial for Beginners - Full Course in 8 Hours [2020](https://www.youtube.com/watch?v=Qqx_wzMmFeA):
+-done Intro
+-done How to run your first Program with Javascript
+-done Manipulate the DOM 
+-done Numbers in Javascript
+-done Functions in Javascript
+-done While vs. For Loops in Javascript
+-done Data Types in Javascript
+-done Strings (Common Methods) 
+-done Javascript in Arrays
+-done Challenge: Your age in days
+-done Challenge: Cat Generator
+-done Challenge: Rock Paper Scissors 
+-done Challenge: Rock Paper Scissors PT. 2
+-done Challenge: Change Button Colors
+-done How Blackjack Works 
+-done Blackjack HTML
+-done Blackjack CSS
+-done Challenge: Build a Blackjack Game with Javascript
+-done Blackjack Part 2 and 3
+-done Blackjack Part 4
+-done Blackjack Part 5
+-done Blackjack Part 6
+
+Javascript Fundamentals(https://www.youtube.com/watch?v=2Ji-clqUYnA&list=PLnHJACx3NwAdT_8forzXYvx0o4A2VnoHX&index=2):
+-done Info
+-done Intro
+-done Goals
+-done Structure
+-done Dev Environment
+-done VS Code and Chrome
+-done Extensions
+-done Emmet
+-done Setup Project
+-done Inline JS
+-done Internal JS
+-done External JS
+-done Cleanup Workspace
+-done Helper Methods
+-done Statements and Comments
+-done Variables
+-done Assign Value Later
+-done Variable Naming Rules
+-done Const, Let, Var
+-done Quatation Marks
+-done String Concatenation
+-done Number Basics
+-done Numbers - Additional Features
+-done Implicit Type Conversion(ITP)
+-done Data Types
+-done Arrays
+-done Functions -Declare, Invoke
+-done Functions -Parameters, Arguments
+-done Functions -Return
+-done Functions -Expressions
+-done Objects
+-done Conditional Statements -Basics
+-done Conditional Statements -Continued
+-done Equality
+-done Logical Operators
+-done Switch Statement
+-done While Loops
+-done Do While Loops
+-done For Loops
+-done String Properties and Methods
+-done Exercise -Full Name
+-done Exercise -Calculate Total
+-done Value vs Reference
+-done Null and Undefined
+-done Truthy and Falsy
+-done Ternary Operator
+-done Global Scope
+-done Local Scope
+-done Variable Lookup
+-done Callback Functions, Higher Order Functions
+-done forEach
+-done map
+-done filter
+-done find
+-done reduce
+-done Math JS Object
+-done Date JS Object
+-done DOM: General Concepts 
+-done Window and Document Overview
+-done getElementyById
+-done getElementByTagName
+-done getElementyByClassName
+-done querySelector and querySelectorAll
+-done Navigate the DOM - Children
+-done Navigate the DOM - Parent
+-done Navigate the DOM - Siblings
+-done textContent and nodeValue
+-done set and get attribute
+-done ClassList and ClassName
+-done CreateElement
+-done insertBefore
+-done ReplaceChild
+-done prepend innerText
+-done Remove and RemoveChild
+-done innerHTML and TextContent
+-done Change CSS with Style Property
+-done Events Overview
+-done Click Event
+-done Function Reference
+-done Mouse Events
+-done Key Events
+-done Event Object
+-done currentTarget vs target
+-done Event Bubbling Capturing
+-done Event Propogation Example
+-done Form Submit
+-done Local Storage
+-done Local Storage with Multiple Values
